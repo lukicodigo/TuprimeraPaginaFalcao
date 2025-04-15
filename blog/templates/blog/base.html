@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tu Blog{% endblock %}</title>
+</head>
+<body>
+    <h1>TuPrimeraPaginaLucas</h1>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a> |
+        <a href="{% url 'crear_autor' %}">Crear Autor</a> |
+        <a href="{% url 'crear_categoria' %}">Crear Categoría</a> |
+        <a href="{% url 'crear_post' %}">Crear Post</a> |
+        <a href="{% url 'buscar_post' %}">Buscar Post</a>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
